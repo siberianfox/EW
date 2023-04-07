@@ -1,0 +1,2029 @@
+<!DOCTYPE HTML PUBLIC>
+<HTML>
+<HEAD>
+  <META http-equiv="content-type" content="text/html; charset=UTF-8">
+  </META>
+  <TITLE>Embedded Wizard Code Generation Report</TITLE>
+  <STYLE>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    html
+    {
+      background-color: #FFFFFF;
+    }
+    body
+    {
+      font-family: Segoe UI, Segoe, Helvetica Neue, Helvetica, Tahoma, Verdana, Arial, sans-serif;
+      margin-left: 0em;
+      margin-right: 0em;
+      -webkit-font-smoothing: antialiased;
+    }
+    div.CodeMetrics table, div.Files table
+    {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      border-spacing: 0;
+    }
+    div.CodeMetrics th, div.Files th
+    {
+      border: 1px solid #DDDDDD;
+      background-color: #F4F4F4;
+      padding: 0.5em;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      color: #666666;
+    }
+    div.CodeMetrics th:hover, div.Files th:hover
+    {
+      border: 1px solid #CCCCCC;
+      background-color: #E4E4E4;
+    }
+    div.CodeMetrics th:active, div.Files th:active
+    {
+      border: 1px solid #BBBBBB;
+      background-color: #C4C4C4;
+      color: #000000;
+    }
+    div.CodeMetrics td, div.Files td
+    {
+      border: 1px solid #DDDDDD;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+    }
+    div.CodeMetrics tr:nth-child(odd), div.Files tr:nth-child(odd)
+    {
+      background-color: #F8F8F8;
+    }
+    div.CodeMetrics tr td:nth-child(3)
+    {
+      text-align: right;
+    }
+    div.CodeMetrics tr td:nth-child(2)
+    {
+      text-align: center;
+    }
+    div.Files tr td:nth-child(2)
+    {
+      text-align: center;
+    }
+    div.Files tr td:nth-child(3)
+    {
+      text-align: right;
+    }
+    div.CodeMetrics tr:last-child, div.Files tr:last-child
+    {
+      font-size: 100%;
+      font-weight: bold;
+    }
+    div.CodeMetrics tr:last-child td, div.Files tr:last-child td
+    {
+      padding: 0.5em;
+    }
+    div.Summary
+    {
+      margin-left:  2em;
+      margin-right: 2em;
+    }
+    div.Summary table
+    {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      border-spacing: 0;
+    }
+    div.Summary tr p:nth-child(1)
+    {
+      line-height: 180%;
+      margin-top: -0.3em;
+    }
+    div.Summary tr p:nth-child(2)
+    {
+      margin-top: -0.5em;
+      margin-bottom: 0.2em;
+    }
+    div.Summary td
+    {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+    div.Summary td p:nth-child(1)
+    {
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+    }
+    div.Summary td p:nth-child(2)
+    {
+      color: #999999;
+      padding-top: 0.25em;
+      font-size: 80%;
+      line-height: 145%;
+    }
+    div.Summary tr td:nth-child(1)
+    {
+    }
+    div.Summary tr td:nth-child(2)
+    {
+      text-align: right;
+    }
+    th
+    {
+      font-weight: normal;
+    }
+    div.Summary tr
+    {
+      border-top: 1px solid #DDDDDD;
+      border-bottom: 1px solid #DDDDDD;
+    }
+    div.Summary tr.HintRow p
+    {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 145%;
+      color: #FF0000;
+      font-size: 80%;
+    }
+    div.footer
+    {
+      height: 4em;
+      background-color: #FFFFFF;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      padding-top: 0em;
+      text-align: center;
+    }
+    div.footer p.footer-1
+    {
+      margin-bottom: 0.1em;
+      font-size: 80%;
+      padding-top: 1em;
+      color: #999999;
+      line-height: 145%;
+    }
+    div.footer p.footer-2
+    {
+      margin-top: 0.1em;
+      margin-bottom: 0.1em;
+      font-size: 80%;
+      color: #999999;
+      line-height: 145%;
+    }
+    div.footer p.footer-3
+    {
+      margin-top: 0.1em;
+      padding-bottom: 2em;
+      font-size: 80%;
+      color: #999999;
+      line-height: 145%;
+    }
+    div.Caption
+    {
+      margin-top: 3em;
+      padding-bottom: 0em;
+      text-align: center;
+    }
+    div.Caption p:nth-child(1)
+    {
+      font-size: 180%;
+      color: #000000;
+    }
+    div.Caption p:nth-child(2)
+    {
+      margin-top: 0.5em;
+      font-size: 100%;
+      color: #999999;
+    }
+    a.LocalLink
+    {
+      text-decoration: none;
+      border-radius: 0.5em;
+      padding-top: 0.0em;
+      padding-bottom: 0.15em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      margin-left: 2em;
+      border: 1px solid #E4E4E4;
+      background-color: #F8F8F8;
+      color: #888888;
+      font-size: 80%;
+    }
+    a.LocalLink:hover
+    {
+      border: 1px solid #CCCCCC;
+      background-color: #E4E4E4;
+      color: #444444;
+    }
+    a.LocalLink:active
+    {
+      border: 1px solid #BBBBBB;
+      background-color: #C4C4C4;
+      color: #000000;
+    }
+  </STYLE>
+</HEAD>
+<BODY>
+  <DIV CLASS=Caption>
+    <P>Code Generation Report</p>
+    <P>created by Embedded Wizard Studio</p>
+  </DIV>
+  <DIV ID=Summary CLASS=Summary>
+    <TABLE>
+      <TR CLASS=InfoRow>
+        <TD>
+          <P>
+            Version of Embedded Wizard Studio
+          </P>
+        </TD>
+        <TD>
+          11.00<BR>(build&nbsp;5089)
+        </TD>
+      </TR>
+      <TR CLASS=InfoRow>
+        <TD>
+          <P>
+            Date of code generation
+          </P>
+        </TD>
+        <TD>
+          7&nbsp;Apr&nbsp;2023<BR>13:35:11
+        </TD>
+      </TR>
+      <TR CLASS=InfoRow>
+        <TD>
+          <P>
+            Selected <a href="https://doc.embedded-wizard.de/profile-member">Profile</a>
+          </P>
+          <P>
+            The Profile contains configuration parameters affecting the code generation.
+          </P>
+        </TD>
+        <TD>
+          WebGL
+        </TD>
+      </TR>
+      <TR CLASS=InfoRow>
+        <TD>
+          <P>
+            <a href="https://doc.embedded-wizard.de/platformpackage-attr">Platform Package</a> name
+          </P>
+          <P>
+            Identifies the Code Generator and Resource Converters used during the code generation.
+          </P>
+        </TD>
+        <TD>
+          Tara.WebGL.RGBA8888
+        </TD>
+      </TR>
+      <TR CLASS=SizeRow>
+        <TD>
+          <P>
+            Total size of all generated files <a class=LocalLink href='#Files'>Show&nbsp;detailed&nbsp;list</a>
+          </P>
+          <P>
+            It is the sum of all code files (e.g. C++, C, H, JS) and resource files (e.g. PNG) created during the code generation process.
+          </P>
+        </TD>
+        <TD>
+          1641&nbsp;KB
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID=Files CLASS=Files>
+    <TABLE>
+      <TR>
+        <TH>
+          Generated File Name
+        </TH>
+        <TH>
+          File Type
+        </TH>
+        <TH>
+          Size (Bytes)
+        </TH>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\EmWiApp.html
+        </TD>
+        <TD>
+          html
+        </TD>
+        <TD>
+          2819
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\_debug_only_dont_deploy.txt
+        </TD>
+        <TD>
+          txt
+        </TD>
+        <TD>
+          76978
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Application.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          53181
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Colours.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          1550
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Components.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          49795
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Core.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          83410
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Effects.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          17642
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Enum.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          1802
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Fonts.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          3092
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Graphics.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          22473
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Images.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          26666
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Resources.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          5185
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Screens.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          127148
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Strings.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          2777
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Templates.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          2015
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Test.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          1447
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Tests.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          1448
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\Views.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          46867
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\WidgetSet.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          41719
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\code\_project.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          2434
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\emwi_compr_11_00.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          162661
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Italic.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          49474
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_15.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          32216
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_17.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          37108
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_20.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          44554
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_24.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          57209
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_25.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          59522
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_30.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          72315
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_50.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          139649
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_56.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          70165
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\FontsNotosans_Med_70.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          224925
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesAntiFrost.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          545
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesAtom_StatusIndicator.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          483
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          3052
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBigArrow.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          260
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBrightnessMax.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          396
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBrightnessMed.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          336
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBrightnessMin.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          248
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBrightnessNotSelected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          282
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesBrightnessOff.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          316
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesCelsius.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          350
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesConfirmation.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1766
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesConnector_Dotted_Left.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          261
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesConnector_Dotted_Right.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          285
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesConnector_Left.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          218
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesConnector_Right.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          250
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesDL_Logo_vector.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          2087
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesDial_Active.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          6210
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesECO_OFF.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1073
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesECO_OFF_Selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1540
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesECO_ON.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          869
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesECO_ON_Selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1659
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesError.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1560
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesFahrenheit.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          286
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesGreenOval.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          318
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Add.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          185
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Arrow.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          284
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Cloud.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          802
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Cloud_command.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          305
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Connected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          376
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Connected_1.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          370
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Connected_Copy.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          448
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_List_select.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          259
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Remove.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          291
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Schedule.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          302
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Sound_active.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          274
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_Sound_not_active.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          467
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesIcon_WiF_3224i.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          742
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesLens.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1006
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesLockYellow.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          889
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesLock_open.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          987
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesMinus.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          145
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSE1200.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          280
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSE1500.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          284
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSE300.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          303
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSE600.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          277
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSE900.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          285
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSNE1200.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          350
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSNE1500.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          365
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSNE300.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          303
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSNE600.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          347
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesNSNE900.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          355
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOff.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          410
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOff_selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          830
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOn.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          477
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOn_selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          850
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOpenWindowDetected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1741
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOrientationArrowBig.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          260
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOrientationArrowSmall.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          222
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOrientationCircleBig.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1062
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOrientationCircleSmall.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          754
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesOrientationCircleSmallEnabled.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          607
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesPagination_Arrow.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          227
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesPagination_Arrow_Left.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          221
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesPagination_Dot_page.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          173
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesPhone.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          658
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesPush5Sec.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1874
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesScheduleBig.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          613
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelector.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          613
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelectorBig.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1043
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelectorBigActive.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1259
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelectorBig_Copy.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1081
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelectorTemp.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          897
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelector_Copy.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          552
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSelector_not_active.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          551
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSettingSlider.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          154
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesSettingSliderBar.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          162
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesTemperature_indicator.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          451
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesTemperature_indicator_combine.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          881
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWIFI_LOW_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1171
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWIFI_MED_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1236
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWIFI_MIN_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1057
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWiFi_Bad_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          950
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWiFi_High_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1377
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWiFi_OFF_BIG.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1205
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_off.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          756
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_signal_high.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          683
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_signal_low.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          607
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_signal_med.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          665
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_signal_min.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          576
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ImagesWifi_signal_missing.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          581
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesbluedot.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          210
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesmenu.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          166
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesoval.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          2775
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagespagination_arrow_big.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1176
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_down.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1276
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_down_landing.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1530
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_down_selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1061
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_left.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          984
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_left_landing.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1144
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_left_selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          882
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_right.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1026
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_right_landing.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1112
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagesrotate_right_selected.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          846
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagessound_big.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          498
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestemperature_indicator_copy.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          275
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestimer_active.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          595
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestimer_standby.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          772
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestimer_standby_big.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1252
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestrack.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          225
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imagestrack_with_space_at_left.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          232
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imageswificheck.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          286
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imageswificheckfail.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          326
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\Imageswificheckok.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          619
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ResourcesDefaultBitmap.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          786
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ResourcesFontMedium.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          38049
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ResourcesFontSmall.js
+        </TD>
+        <TD>
+          js
+        </TD>
+        <TD>
+          28442
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\ResourcesWhiteBitmapStripe.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          141
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\WidgetSetPushButtonSmall.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          1746
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          D:\Project\DL_COMFORT\MDH-EVO\GUI_Project_EW\EmWiGui\WebGL\res\WidgetSetSwitchMedium.png
+        </TD>
+        <TD>
+          png
+        </TD>
+        <TD>
+          5675
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          TOTAL
+        </TD>
+        <TD>
+        </TD>
+        <TD>
+          1679771
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+    <div class='footer'>
+      <p class='footer-1'><a href='http://www.embedded-wizard.de' target='_blank'>Embedded Wizard</a> is a product of <a href='http://www.tara-systems.de' target='_blank'>TARA Systems GmbH</a></p>
+      <p class='footer-2'>Concept and implementation by <span class='autor'>Paul Banach</span> and <span class='autor'>Manfred Schweyer</span></p>
+      <p class='footer-3'><span>Copyright © 2019 TARA Systems GmbH</span></p>
+    </div>
+    <SCRIPT>
+      if ( !Array.from )
+        Array.from = function( arrayLike )
+        {
+          var temp_array = [];
+          var length     = arrayLike.length;
+          for ( var i = 0; i < length; i++ )
+            temp_array.push( arrayLike[i]);
+          return temp_array;
+        };
+      var ths = document.querySelectorAll( 'th' );
+      function hookTable( th )
+      {
+        th.addEventListener( 'click', function()
+        {
+          const tbody   = th.parentNode.parentNode;
+          var   content = Array.from( tbody.querySelectorAll( 'tr' ));
+          var   first   = content.shift();
+          var   last    = content.pop();
+          var   inx     = Array.from( th.parentNode.children ).indexOf( th );
+          var   asc     = !!this.asc;
+          content.sort( function( a, b )
+          {
+            a = a.children[ inx ].innerText || a.children[ inx ].textContent;
+            b = b.children[ inx ].innerText || b.children[ inx ].textContent;
+            if (( a !== '' ) && ( b !== '' ) && !isNaN( a ) && !isNaN( b ))
+              return asc? a - b : b - a;
+            else
+              return asc? a.toString().localeCompare( b ) :
+                          b.toString().localeCompare( a );
+          });
+          content.forEach( function( tr ){ tbody.appendChild( tr ); });
+          tbody.appendChild( last );
+          this.asc = !asc;
+        });
+      }
+      for ( var i = 0; i < ths.length; i++ )
+        hookTable( ths[i]);
+    </SCRIPT>
+  </BODY>
