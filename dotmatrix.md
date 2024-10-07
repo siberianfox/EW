@@ -2,4 +2,4 @@ layout: page
 
 title: "PAGE-TITLE"
 
-permalink: /DOTMATRIX
+permalink: /DOTMATRIX/EmWiApp
