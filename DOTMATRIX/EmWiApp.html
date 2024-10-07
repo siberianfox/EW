@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+  <TITLE></TITLE>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <META name="Generator" content="Embedded Wizard, Tara Systems GmbH, written by Paul Banach and Manfred Schweyer">
+  </HEAD>
+  <BODY>
+    <CANVAS id="_canvas_EmWiApp" width="400" height="400" tabindex="1">
+      Sorry, your browser doesn't support the canvas element.
+    </CANVAS>
+    <SCRIPT type="text/javascript" src="emwi_compr_12_05.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/_project.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Core.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Effects.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Graphics.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Resources.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="res/ResourcesFontMedium.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Views.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Templates.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Application.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/BrickGame.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Image.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/Screen.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="code/WidgetSet.js"></SCRIPT>
+    <SCRIPT type="text/javascript">
+      /* Initialization parameters of the Embedded Wizard WebGL GUI application:
+
+      - 'FullScreenUpdate' : Determines the application's screen update mode.
+         If this value is 'true' entire screen is redrawn each time the update
+         is performed. If this value is 'false' only changed areas are redrawn.
+         This, however, expects the WebGL implementation to preserve the content
+         of the framebuffer between two consecutive screen update. Possibly, this
+         so-called partial update may fail on older Web browsers. The default
+         value is 'false' what means ==> 'partial update'.
+
+      - 'Alpha' : Determines whether the WebGL canvas uses the alpha channel to
+         store opacity values. If this value is 'true', alpha channel is used and
+         HTML content can be seen through transparent areas of the WebGL canvas.
+         If this value is 'false', the WebGL canvas will cover all HTML contents
+         lying behind it. The default value is 'false'.
+
+      - 'Debug' : Determines whether additional error state verification should
+         be performed and controls additional debug log outputs. Per default the
+         value is 'false'.
+
+      - 'OnKeyEvent' : Determines a keyboard code translation function. Each time
+         a keyboard down or press event is received, the assigned function is
+         called and allows user specific key code conversion. When the function
+         is called, the key event as it was received from the browser is passed
+         to this function in its unique parameter. Thereupon the function can
+         evaluate the events, and decide whether and how the event should be
+         percepted by the EmWi application. In the return value the function
+         should return either 'null' or an object containing one of the members:
+         'KeyCode' or 'CharCode'. The member 'KeyCode' can be initialized with
+         the a value from the enumration Core::KeyCode. The value 'CharCode' can
+         be initialized with a unicode character code.
+         The returned value 'null' means, that no specific conversion was
+         performed. Thereupon the runtime environment will perform the default
+         event conversion. */
+
+      var params = { "FullScreenUpdate" : false,
+                     "Alpha"            : false,
+                     "Debug"            : false,
+                     "OnKeyEvent"       : null };
+
+      // Initialize the application 
+      EmWiApp._Init( "_canvas_EmWiApp", params );
+    </SCRIPT>
+  </BODY>
+</HTML>
