@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style>
+		@keyframes spin
+			{
+			to
+				{
+				transform: rotate(360deg);
+				}
+			
+			}
+		</style>
+
+        <title>Sample Service Panel</title>
+        <meta name="description" content="">
+
+       <script>
+var port;
+var reader;
+var lastReceivedRecord=new Uint8Array(256);
+var receivedChars=0;
+var PollingTimer;
+var ReadTimer;
+var LinkStatusTimer=0;
+
+let i = 0;
+
+//eventi BOM (oggetto window)
+function saluta () {
+alert("pagina in caricamento");
+};
+//window.onload = saluta; // funziona
+
+//window.onload = function () {
+//alert("pagina in caricamento");
+//};
+
+
+function increment() {
+  i++;
+  console.log(i);
+}
+
+
+async function sendUartBuffer(buffer)
+{
+		writer = await port.writable.getWriter();
+
+		
+		//receivedChars=0;
+
+			
+		data = new Uint8Array(15); // 
+		data[0]=('0x02');
+		for (let loop = 0; loop < 12; loop++)
+		{
+			data[loop+1]=(buffer[loop]);
+		}
+		data[13]=(0x0d);
+		data[14]=(0x0a);
+		console.log("Sending->"+data);
+//		}
+
+		await writer.write(data).catch((err) => {console.log("ERRORE!\n")});
+		//console.log(data);
+
+		// Allow the serial port to be closed later.
+		writer.releaseLock();
+		
+		showLinkStatus();
+	
+}
+
+async function sendUartValue(value,cmd)
+{
+	let len=value.length;
+	let sign=0;
+	data = new Uint8Array(12);
+	if (len>7)
+		len=7;
+		
+	for (tloop=6; tloop; tloop--)
+	{	
+		if (len >0)
+		{
+			data[tloop] =  value.charCodeAt(len-1);
+		}
+		else
+			data[tloop] = 0x30;
+		if (len>0)
+			len--;
+	}
+
+	if(value<0)
+		data[0]= 0x2d;
+	else
+		data[0]= 0x2b
+	
+	data[7]=cmd;
+	data[8]=0X4D, data[9]=0X43,data[10]=0X48,data[11]=0X50
+	
+	
+	//console.log (data);
+	sendUartBuffer(data);
+}
+
+
+
+
+
+function checkSerialAsset()
+{
+
+	if ("serial" in navigator)
+	{ // The Web Serial API is supported.
+		// alert("Serials OK");
+
+	//add an asyncronous handler to open button
+	document.getElementById('buttonB').addEventListener('click', async () => {
+		// Prompt user to select any serial port.
+		port = await navigator.serial.requestPort();
+		console.log(port);
+		await port.open({ baudRate: 115200 });
+		PollingTimer=setInterval(timedUartRequest, 500);
+		//ReadTimer=setInterval(readUartData, 500);
+		setTimeout(readUartData,0);  //get data 
+		
+		document.getElementById('buttonB').hidden=true;
+		document.getElementById('buttonCmdReconnect').disabled=false;
+		document.getElementById('buttonCmdCalibrate').disabled=false;
+		document.getElementById('spinner').style.borderColor="green green green green"; 
+	
+		port.addEventListener('disconnect', event =>
+			{
+			// notify that the port has become unavailable
+		setTimeout(function(){
+								document.getElementById('spinner').style.borderColor="red red red red"; 
+								},500); //delay is in milliseconds 
+			alert("Disconnection of Serial Adapter");
+			window.location.reload();
+			});
+		
+		});
+		
+
+	document.getElementById('buttonCmdReconnect').addEventListener('click',async () => {
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x33,0X4D,0X43,0X48,0X50])
+								}, 10);
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x34,0X4D,0X43,0X48,0X50]);
+								}, 400);
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0X4D,0X43,0X48,0X50]);
+								}, 500);
+		
+	});
+
+	document.getElementById('buttonCmdCalibrate').addEventListener('click',async () => {
+		
+		document.getElementById('spinner').style.borderColor="red";
+		
+		setTimeout(function(){
+								document.getElementById('spinner').style.borderColor="red yellow red yellow"; 
+								},5); //delay is in milliseconds 
+
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x33,0X4D,0X43,0X48,0X50])
+								}, 10);
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x34,0X4D,0X43,0X48,0X50]);
+								}, 400);
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0X4D,0X43,0X48,0X50]);
+								}, 500);
+
+		setTimeout(function() {
+								sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x35,0X4D,0X43,0X48,0X50]);
+								}, 600);
+
+		setTimeout(function(){
+								document.getElementById('spinner').style.borderColor="green green green green";								
+								},5000); //delay is in milliseconds 
+
+		
+	});
+
+
+
+
+	document.getElementById('buttonCmdUnlock').addEventListener('click',async () => {
+		alert("WARNING, the full command mode it's not usually needed!");
+		document.getElementById('buttonCmdHISSet').disabled=false;
+		document.getElementById('buttonCmdTHSet').disabled=false;
+		document.getElementById('buttonCmdBTHSet').disabled=false;
+		
+
+		document.getElementById('buttonCmdReset').disabled=false;
+		document.getElementById('buttonCmdFlip').disabled=false;
+		document.getElementById('buttonCmdMode').disabled=false;
+		document.getElementById('buttonCmdCalibration').disabled=false;
+		
+	});
+
+	document.getElementById('buttonCmdReset').addEventListener('click',async () => {sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x33,0X4D,0X43,0X48,0X50])});
+	document.getElementById('buttonCmdFlip').addEventListener('click',async () =>  {sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x34,0X4D,0X43,0X48,0X50])});
+	document.getElementById('buttonCmdMode').addEventListener('click',async () =>  {sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0X4D,0X43,0X48,0X50])});
+
+	document.getElementById('buttonCmdCalibration').addEventListener('click',async () =>  {
+
+		//console.log("test key1:"+document.getElementById('ed_hysteresis').value  );
+		sendUartBuffer([0x2b,0x30,0x31,0x32,0x33,0x34,0x35,0x35,0X4D,0X43,0X48,0X50]);
+
+		});
+
+	document.getElementById('buttonCmdHISSet').addEventListener('click',async () =>  {
+
+		//console.log("test key1:"+document.getElementById('ed_hysteresis').value  );
+		sendUartValue(document.getElementById('ed_hysteresis').value, 0x32);
+
+		});
+
+	document.getElementById('buttonCmdTHSet').addEventListener('click',async () =>  {
+
+		//console.log("test key2:"+document.getElementById('ed_thresold').value);
+		sendUartValue(document.getElementById('ed_thresold').value, 0x31);
+
+		});
+
+	document.getElementById('buttonCmdBTHSet').addEventListener('click',async () =>  {
+
+		//console.log("test key3:"+document.getElementById('ed_blthresold').value);
+		sendUartValue(document.getElementById('ed_blthresold').value, 0x39);
+
+		});
+
+	}
+	else
+		alert("Serials Fail");
+
+}
+window.onload = checkSerialAsset;
+
+
+async function showLinkStatus()
+{
+				if(LinkStatusTimer>0)
+				{
+					LinkStatusTimer--;
+					document.getElementById('STATUS_T1').innerHTML="<span style='color: green;font-weight: bold;'>Sensor is ONLINE</span>";
+					document.getElementById('Frame_A').style="*display: inline-block; border: 3px solid green; margin-left:20px ; vertical-align: top;float:left";
+				}
+				else
+				{
+					document.getElementById('STATUS_T1').innerHTML="<span style='color: red;font-weight: bold;'>Sensor is OFFLINE</span>";
+					document.getElementById('Frame_A').style="*display: inline-block; border: 3px solid red; margin-left:20px ; vertical-align: top;float:left";
+				//	document.getElementById('Frame_B').style="*display: inline-block; border: 3px solid red; margin-left:20px width:50%; vertical-align: top;float:right";
+		setTimeout(function(){
+								document.getElementById('spinner').style.borderColor="red red red red"; 
+								},500); //delay is in milliseconds 
+
+				}
+}
+
+
+async function timedUartRequest()
+{
+	var commandToSend=0;
+	var CheckSum=0x55;
+	
+		writer = await port.writable.getWriter();
+		
+		//receivedChars=0;
+
+			
+//			data = new Uint8Array([0x0a, 0x09, 0x80, 0x0f, commandToSend, 0x00,0x00,0x00, 0x00,CheckSum]); // 
+			//console.log("Sending->"+data);
+//		}
+
+//		await writer.write(data);
+		//console.log(data);
+
+		// Allow the serial port to be closed later.
+		writer.releaseLock();
+		
+		showLinkStatus();
+		
+
+}
+
+
+
+
+
+async function readUartData()
+{
+console.log("reading start!\r\n");
+	while (port.readable) {
+	  reader = port.readable.getReader();
+
+	  try {
+		while (true) {
+		  const { value, done } = await reader.read();
+		  if (done) {
+			// Allow the serial port to be closed later.
+			await reader.releaseLock();
+			break;
+		  }
+		  if (value) {
+		//	console.log("Received->"+value);
+			
+			//if(receivedChars!=0 || value[0]== 0xa0)
+			{
+				value.forEach(
+					
+					function savedata(value)
+					{
+						if (value==0x02)
+							receivedChars=0;
+					
+						lastReceivedRecord[receivedChars]=value;
+						if ( (receivedChars<200))
+						{
+							if(value==0x0A)
+							{
+								TableRefresh();
+								//console.log(lastReceivedRecord);
+							}
+							receivedChars++;
+						}
+					}
+				);
+			}
+			
+			break;
+		  }
+		}
+	  } catch (error) {
+		// TODO: Handle non-fatal read error.
+		console.log("rec error");
+	  }
+  	    finally 
+	  {
+		await reader.releaseLock();
+		console.log("rec end");
+	  }
+
+	}
+}
+
+
+
+
+
+function TableRefresh()
+{
+//console.log("Refresh Button");	
+	let charScan=1;
+	LinkStatusTimer= 5;
+
+// if (lastReceivedRecord[2]==0x60 && receivedChars==32)
+ if (lastReceivedRecord[0]==0x02 && receivedChars>=52 )
+ {
+	printext="SW Revision=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+    document.getElementById('Field_T1').innerHTML =printext;
+//	console.log(printext+0x0d+0x0a);
+
+
+	printext="STATUS Flags=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T2').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Calib. Measure=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T3').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Current Value=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T4').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Deviation Value=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T5').innerHTML =printext;
+	document.getElementById('Field_DELTA').innerHTML =printext;
+	
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Threshold=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T6').innerHTML =printext;		
+//	console.log(printext);
+
+	printext="Hysteresis=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T7').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Blinding Th.=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T8').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Err. Flag 0=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T9').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+	printext="Err. Flag 1=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T10').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+	
+	printext="Err. Flag 2=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T11').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+	
+	printext="Err. Flag 3=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T12').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+	
+	printext="Err. Flag 4=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T13').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+	
+
+	printext="Tx Counter=";
+	while (lastReceivedRecord[charScan]!=0x3b) // cerca il terminatore ';'
+	{
+		printext+=String.fromCharCode(lastReceivedRecord[charScan]);
+		charScan++;
+	}
+	charScan++;
+	document.getElementById('Field_T15').innerHTML =printext;		
+//	console.log(printext+0x0d+0x0a);
+
+
+ }
+
+}
+
+
+
+
+
+	   
+	   
+	   </script>
+
+
+    </head>
+
+    <body>
+        <h1 style="margin-left:20px">Hello To Dedica Water Sensor Web Panel!</h1>
+	
+		
+		<div class="row" style="margin-left:50px">
+			<input id="buttonB" type = "button"  value = "Open Serial Link" 	>
+			<span style="display:inline-block;margin-left:10px"></span>
+		</div>
+		<span style="display:inline-block;margin-left:20px"></span>
+		
+		<div id="STATUS_T1" style="color:red; margin-left:20px">Sensor is OFFLINE</div>
+		<span style="display:inline-block;margin-left:10px"></span>
+		
+
+		<div class="row" style="margin-left:50px;  margin-bottom:80px ">
+			<div id="spinner" style="height:40px; width:40px; border:8px solid; border-color: yellow yellow yellow yellow; border-radius:50%; animation: spin 1.3s ease infinite"></div>
+			<span style="display:inline-block;margin-left:10px"></span>
+			<p> </p>
+			<input id="buttonCmdReconnect" type = "button"  value = "RE-CONNECT"disabled=true>
+			<span style="display:inline-block;margin-left:10px"></span>
+
+			<input id="buttonCmdCalibrate" type = "button"  value = "CALIBRATE"disabled=true> 
+			<span style="display:inline-block;margin-left:10px"></span>
+			
+
+			<b><span id="Field_DELTA" style="display:inline-block;margin-left:10px; color: blue"></span></b>
+			
+		</div>
+			</tr>
+
+
+
+	   <div class="row" style="*display: inline-block; border: 3px solid black; margin-left:20px ; vertical-align: top;float:left">
+		
+		<div class="row" style="margin-left:50px;  margin-bottom:60px ">
+			<p id="spacer1" > </p>
+			<p id="spacer1" > </p>
+			<input id="buttonCmdReset" type = "button"  value = "Reset" disabled=true>
+			<span style="display:inline-block;margin-left:10px"></span>
+
+			<input id="buttonCmdFlip" type = "button"  value = "Flip UART" disabled=true>
+			<span style="display:inline-block;margin-left:10px"></span>
+
+ 			 <input id="buttonCmdMode" type = "button"  value = "Change Mode" disabled=true>
+			 <span style="display:inline-block;margin-left:10px"></span>
+
+ 			 <input id="buttonCmdUnlock" type = "button"  value = "Unlock Commands" >
+			 <span style="display:inline-block;margin-left:10px"></span>
+			<p id="spacer1" > </p>
+		</div>
+		
+
+
+		<div class="row" style="margin-left:50px">
+			<table border:1px solid black>
+
+			<tr>
+			 <th>
+			  <input id="buttonCmdCalibration" type = "button"  value = "Calibration Set" disabled=true>
+			  <span style="display:inline-block;margin-left:10px"></span>
+			 </th>
+			 <th>
+				<p> </p>
+			 </th>
+			</tr>
+
+			<tr>
+			 <th>
+			  <input id="buttonCmdHISSet" type = "button"  value = "Histeresis Set" disabled=true>
+			  <span style="display:inline-block;margin-left:10px"></span>
+			 </th>
+			 <th>
+				<input id="ed_hysteresis" type="number" value="10">
+			 </th>
+			</tr>
+
+			<tr>
+			 <th>
+			  <input id="buttonCmdTHSet" type = "button"  value = "Threshold Set" disabled=true>
+			  <span style="display:inline-block;margin-left:10px"></span>
+			 </th>
+			 <th>
+				<input id="ed_thresold" type="number" value="550">
+			 </th>
+			</tr>
+
+			<tr>
+			 <th>
+			  <input id="buttonCmdBTHSet" type = "button"  value = "Blinding Thresold Set" disabled=true>
+			  <span style="display:inline-block;margin-left:10px"></span>
+			 </th>
+			 <th>
+				<input id="ed_blthresold" type="number" value="8000">
+			 </th>
+			</tr>
+			</table>
+			<p id="spacer2" > </p>
+		
+		</div>
+       </div>
+
+
+
+
+			<div id="Frame_A" style="*display: inline-block; border: 3px solid green; margin-left:20px ; vertical-align: top;float:left">
+
+				<div id="Field_T1" ></div>
+				<div id="Field_T2" ></div>
+				<div id="Field_T3" ></div>
+				<div id="Field_T4" ></div>
+				<div id="Field_T5" ></div>
+				<div id="Field_T6" ></div>
+				<div id="Field_T7" ></div>
+				<div id="Field_T8" ></div>
+				<div id="Field_T9" ></div>
+				<div id="Field_T10" ></div>
+				<div id="Field_T11" ></div>
+				<div id="Field_T12" ></div>
+				<div id="Field_T13" ></div>
+				<div id="Field_T14" ></div>
+				<div id="Field_T15" ></div>
+				<div id="Field_T16" ></div>
+				<div id="Field_T17" ></div>
+				<div id="Field_T18" ></div>
+				<div id="Field_T19" ></div>
+				<div id="Field_T20" ></div>
+			</div>
+
+
+
+    </body>
+</html>
