@@ -59,7 +59,7 @@ X:this},0);B.abh.Text._Init.call(this.Dt={X:this},0);C.EI._Init.call(this.Dw={X:
 this},0);this.__proto__=C.G7;this.Al(AF);this.D6.Al(AB);this.D6.B3(0xFF000000);this.
 Cv.Al(CI);this.Cv.Fo(true);this.Aw.Al(Ed);this.A0.Al(Ee);this.A0.Hg(true);this.A0.
 Cr(0x52);this.BV.Eb(Ef);this.BV.DP(Eg);this.BV.Cs(Fx);this.BV.CG(Eh);this.BV.H9(
-false);this.B9.Al(EW);this.Timer.Hj(100);this.Timer.Cf(true);this.ES.Al(Hr);this.
+false);this.B9.Al(EW);this.Timer.Hj(10);this.Timer.Cf(true);this.ES.Al(Hr);this.
 Dl.Al(JL);this.Dl.Hg(true);this.Dl.Cr(0x92);this.Text.Al(JM);this.Text.BL(JN);this.
 Text.B3(0xFF000000);this.Dq.Al(JO);this.Dq.BL(JP);this.Dq.B3(0xFF000000);this.BB.
 Al(JQ);this.BB.Cr(0x33);this.BB.BL(Gv);this.Dr.Al(JR);this.Dr.BL(JS);this.Dr.B3(
