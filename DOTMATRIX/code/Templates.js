@@ -24,17 +24,13 @@
 *
 *******************************************************************************/
 
-var EmWiCompr_12_05;var EmWiApp;if(!EmWiCompr_12_05)throw new Error("The Embedded Wizard runtime environment file 'emwi_compr_12_05.js' isn't yet loaded!"
-);if(EmWiApp)throw new Error("The application file '_project.js' included twice!"
-);EmWiApp=(function(){var B={__proto__:EmWiCompr_12_05};
-B.Default=0;
-B.aaF=[900,580];B.qJ=function(){return B.kh.G7;};B.y9="";B.on=0;B.aa6=0;B.ju=[];B.
-_Init=function(){B.Core._Init();B.abk._Init();B.Graphics._Init();B.abg._Init();B.
-abh._Init();B.kh._Init();B.abl._Init();B.abj._Init();B.abi._Init();this.__proto__.
-_Init.apply(this,arguments);};B._ReInit=function(){B.Core._ReInit();B.abk._ReInit(
-);B.Graphics._ReInit();B.abg._ReInit();B.abh._ReInit();B.kh._ReInit();B.abl._ReInit(
-);B.abj._ReInit();B.abi._ReInit();};B.aaD=function(E){B.Core.BM(E);B.abk.BM(E);B.
-Graphics.BM(E);B.abg.BM(E);B.abh.BM(E);B.kh.BM(E);B.abl.BM(E);B.abj.BM(E);B.abi.
-BM(E);};return B;})();
+var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
+);if(EmWiApp.abi)throw new Error("The unit file 'Templates.js' included twice!");
+EmWiApp.abi=(function(){var B=EmWiApp;var C={};
+
+C.BB={_Init:function(aArg){B.Core.Af._Init.call(this,aArg);this.__proto__=C.BB;},
+_className:"Templates::TextEditor"};
+C._Init=function(){C.BB.__proto__=B.Core.Af;};C._ReInit=function(){};C.BM=function(
+E){};return C;})();
 
 /* Embedded Wizard */

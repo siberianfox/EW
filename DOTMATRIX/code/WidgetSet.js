@@ -25,10 +25,10 @@
 *******************************************************************************/
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
-);if(EmWiApp.abk)throw new Error("The unit file 'WidgetSet.js' included twice!");
-EmWiApp.abk=(function(){var A=EmWiApp;var C={};
+);if(EmWiApp.abl)throw new Error("The unit file 'WidgetSet.js' included twice!");
+EmWiApp.abl=(function(){var B=EmWiApp;var C={};
 
 
-C._Init=function(){};C._ReInit=function(){};C.AX=function(E){};return C;})();
+C._Init=function(){};C._ReInit=function(){};C.BM=function(E){};return C;})();
 
 /* Embedded Wizard */

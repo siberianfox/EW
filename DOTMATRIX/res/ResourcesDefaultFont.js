@@ -25,9 +25,9 @@
 *******************************************************************************/
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
-);if(EmWiApp.abl)throw new Error("The file file 'ResourcesDefaultFont.js' included twice!"
+);if(EmWiApp.abm)throw new Error("The file file 'ResourcesDefaultFont.js' included twice!"
 );
-EmWiApp.abl=[9,3,0,2,96,96,"\
+EmWiApp.abm=[9,3,0,2,96,96,"\
 \u0000\u8001\u7FFA\u0005\u0006\u8007\u0000\u0000\u0020\u8000\u8000\u0000\u0000\u8003\u0000\u001C\
 \u0021\u8001\u7FF9\u0001\u0007\u8003\u0000\u001C\u0022\u8000\u7FF9\u0003\u0002\u8003\u0000\u0025\
 \u0023\u8000\u7FF9\u0004\u0007\u8005\u0000\u002C\u0024\u8000\u7FF9\u0005\u0008\u8005\u0000\u004C\
