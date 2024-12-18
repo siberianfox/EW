@@ -27,7 +27,7 @@
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
 );if(EmWiApp.kh)throw new Error("The unit file 'Application.js' included twice!"
 );EmWiApp.kh=(function(){var A=EmWiApp;var C={};
-var Ae=[0,0,800,580];var At=[0,550,15,580];var B4=[548,0,800,578];var CP=[579,64,
+var Ae=[0,0,800,580];var At=[0,550,15,580];var B4=[548,0,800,580];var CP=[579,64,
 774,517];var CQ=[20,541];var CR=[228,541];var Co=[228,121];var Ei=[20,121];var FS=[
 305,122,515,542];var FT=[375,9,446,73];var FU=[383,14,438,69];var EV=[0,0,15,30];
 var FV=[1,2,13,14];var FW=[2,16,12,25];var FX="0";var FY=[0,0,13,13];var EW=[0,0
