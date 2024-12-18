@@ -19,7 +19,7 @@
 * the original template file!
 *
 * Version  : 12.05
-* Profile  : Prototype
+* Profile  : Profile
 * Platform : Web.WebGL.RGBA8888
 *
 *******************************************************************************/

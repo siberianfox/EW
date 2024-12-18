@@ -19,7 +19,7 @@
 * the original template file!
 *
 * Version  : 12.05
-* Profile  : Prototype
+* Profile  : Profile
 * Platform : Web.WebGL.RGBA8888
 *
 *******************************************************************************/
@@ -28,14 +28,12 @@ var EmWiCompr_12_05;var EmWiApp;if(!EmWiCompr_12_05)throw new Error("The Embedde
 );if(EmWiApp)throw new Error("The application file '_project.js' included twice!"
 );EmWiApp=(function(){var A={__proto__:EmWiCompr_12_05};
 A.Default=0;
-A.aaF=[400,400];A.qJ=function(){return A.kh.Fu;};A.y9="";A.on=0;A.aa6=0;A.ju=[];A.
+A.aaF=[800,580];A.qJ=function(){return A.kh.D7;};A.y9="";A.on=0;A.aa6=0;A.ju=[];A.
 _Init=function(){A.Core._Init();A.abj._Init();A.Graphics._Init();A.abg._Init();A.
-abh._Init();A.abk._Init();A.kh._Init();A.BrickGame._Init();A.Image._Init();A.abl.
-_Init();A.abi._Init();this.__proto__._Init.apply(this,arguments);};A._ReInit=function(
-){A.Core._ReInit();A.abj._ReInit();A.Graphics._ReInit();A.abg._ReInit();A.abh._ReInit(
-);A.abk._ReInit();A.kh._ReInit();A.BrickGame._ReInit();A.Image._ReInit();A.abl._ReInit(
-);A.abi._ReInit();};A.aaD=function(F){A.Core.A1(F);A.abj.A1(F);A.Graphics.A1(F);
-A.abg.A1(F);A.abh.A1(F);A.abk.A1(F);A.kh.A1(F);A.BrickGame.A1(F);A.Image.A1(F);A.
-abl.A1(F);A.abi.A1(F);};return A;})();
+abh._Init();A.kh._Init();A.abk._Init();A.abi._Init();this.__proto__._Init.apply(
+this,arguments);};A._ReInit=function(){A.Core._ReInit();A.abj._ReInit();A.Graphics.
+_ReInit();A.abg._ReInit();A.abh._ReInit();A.kh._ReInit();A.abk._ReInit();A.abi._ReInit(
+);};A.aaD=function(E){A.Core.AX(E);A.abj.AX(E);A.Graphics.AX(E);A.abg.AX(E);A.abh.
+AX(E);A.kh.AX(E);A.abk.AX(E);A.abi.AX(E);};return A;})();
 
 /* Embedded Wizard */
