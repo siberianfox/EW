@@ -27,30 +27,30 @@
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
 );if(EmWiApp.Graphics)throw new Error("The unit file 'Graphics.js' included twice!"
 );EmWiApp.Graphics=(function(){var B=EmWiApp;var D={};
-var AQ=[0,0];var AO="Can not resize explicitly attached graphics engine bitmaps";
-var CU=[0,0,0,0];var CV="No graphics engine bitmap attached to this canvas";var EA=
-"The canvas is already initialized with a graphics engine bitmap";var EB="WarpBitmap() operation has been omitted due to the resulting area "+
-"being wider or higher than 4069 pixel.";var EC="ScaleBitmap() operation has been omitted due to the resulting area "+
+var AR=[0,0];var AP="Can not resize explicitly attached graphics engine bitmaps";
+var CU=[0,0,0,0];var CV="No graphics engine bitmap attached to this canvas";var ED=
+"The canvas is already initialized with a graphics engine bitmap";var EE="WarpBitmap() operation has been omitted due to the resulting area "+
+"being wider or higher than 4069 pixel.";var EF="ScaleBitmap() operation has been omitted due to the resulting area "+
 "being wider or higher than 4069 pixel.";var Gz="DrawThickLine() operation has been omitted due to the resulting area "+
 "being wider or higher than 4069 pixel.";var IA=[1,1];var Hu=[2,2];
 D.Canvas={AB:null,JD:null,Dt:B.vx,Ds:0,IM:false,Dr:function(){if(this.IM)this.DetachBitmap(
-);},BC:function(aArg){this.DJ=true;},Im:function(C){if((C[0]<=0)||(C[1]<=0))C=AQ;
-if(B.z8(C,this.FrameSize))return;if(this.IM)throw new Error(AO);this.FrameSize=C;
+);},BC:function(aArg){this.DJ=true;},Im:function(C){if((C[0]<=0)||(C[1]<=0))C=AR;
+if(B.z8(C,this.FrameSize))return;if(this.IM)throw new Error(AP);this.FrameSize=C;
 this.Dm=(((this.FrameSize[0]>0)&&(this.FrameSize[1]>0))&&(this.FrameDelay>0))&&(
 this.NoOfFrames>1);if(!this.bitmap)return;var handle=this.bitmap;B.zx(handle);this.
 bitmap=null;},Update:function(){var A;if((!this.bitmap&&(this.FrameSize[0]>0))&&(
 this.FrameSize[1]>0)){var frameSize=this.FrameSize;var noOfFrames=this.NoOfFrames;
 var frameDelay=this.FrameDelay;var handle=null;{handle=B.qQ(B.cC,frameSize,frameDelay
-,noOfFrames);}this.bitmap=handle;if(!this.bitmap){this.FrameSize=AQ;this.FrameDelay=
-0;this.NoOfFrames=1;}this.Dt=[].concat(AQ,this.FrameSize);if(!!this.bitmap){var dstFrameNr=
+,noOfFrames);}this.bitmap=handle;if(!this.bitmap){this.FrameSize=AR;this.FrameDelay=
+0;this.NoOfFrames=1;}this.Dt=[].concat(AR,this.FrameSize);if(!!this.bitmap){var dstFrameNr=
 this.Ds;for(this.Ds=this.NoOfFrames-1;this.Ds>=0;this.Ds--)this.Js(this.Dt,this.
 Dt,0x00000000,0x00000000,0x00000000,0x00000000,false);this.Ds=dstFrameNr;}}if(!(((
 A=this.Dt)[0]>=A[2])||(A[1]>=A[3]))){if((this.FrameSize[0]>0)&&(this.FrameSize[1
 ]>0))(A=this.JD)?A[1].call(A[0],this):null;this.Dt=CU;}},DetachBitmap:function(){
-if(!this.IM)throw new Error(CV);this.bitmap=null;this.IM=false;this.FrameSize=AQ;
+if(!this.IM)throw new Error(CV);this.bitmap=null;this.IM=false;this.FrameSize=AR;
 this.FrameDelay=0;this.NoOfFrames=1;this.Dm=false;return this;},AttachBitmap:function(
-aBitmap){if(!!this.bitmap)throw new Error(EA);if(!aBitmap)return this;this.bitmap=
-aBitmap;this.IM=true;var noOfFrames=1;var frameSize=AQ;var frameDelay=0;{noOfFrames=
+aBitmap){if(!!this.bitmap)throw new Error(ED);if(!aBitmap)return this;this.bitmap=
+aBitmap;this.IM=true;var noOfFrames=1;var frameSize=AR;var frameDelay=0;{noOfFrames=
 aBitmap.NoOfFrames;frameSize=aBitmap.FrameSize;frameDelay=aBitmap.FrameDelay;}this.
 NoOfFrames=noOfFrames;this.FrameSize=frameSize;this.FrameDelay=frameDelay;this.Dm=(
 this.FrameDelay>0)&&(this.NoOfFrames>1);return this;},MD:function(aClip,LN,aString
@@ -64,7 +64,7 @@ this.Ds;var dstBitmap=this.bitmap;var srcFont=LN.font;{B.qT(dstBitmap,srcFont,aS
 ,aColorTR,aColorBR,aColorBL,aBlend){var A;if(!this.bitmap)this.Update();if(!this.
 bitmap)return;if((((!aBitmap||!aBitmap.bitmap)||!Hy)||(aFrameNr<0))||(aFrameNr>=
 aBitmap.NoOfFrames))return;var dstBitmap=this.bitmap;var srcBitmap=aBitmap.bitmap;
-var dstFrameNo=this.Ds;var srcRect=[].concat(AQ,aBitmap.FrameSize);var left=((Hy&
+var dstFrameNo=this.Ds;var srcRect=[].concat(AR,aBitmap.FrameSize);var left=((Hy&
 0x1)===0x1);var top=((Hy&0x2)===0x2);var right=((Hy&0x4)===0x4);var bottom=((Hy&
 0x8)===0x8);var interior=((Hy&0x10)===0x10);{B.zp(dstBitmap,srcBitmap,dstFrameNo
 ,aFrameNr,aClip,aDstRect,srcRect,left,top,right,bottom,interior,aColorTL,aColorTR
@@ -77,7 +77,7 @@ x1)x1=aDstX2;if(aDstX3<x1)x1=aDstX3;if(aDstX4<x1)x1=aDstX4;if(aDstX2>x2)x2=aDstX
 if(aDstX3>x2)x2=aDstX3;if(aDstX4>x2)x2=aDstX4;if(aDstY2<y1)y1=aDstY2;if(aDstY3<y1
 )y1=aDstY3;if(aDstY4<y1)y1=aDstY4;if(aDstY2>y2)y2=aDstY2;if(aDstY3>y2)y2=aDstY3;
 if(aDstY4>y2)y2=aDstY4;if(((((x2-x1)>4096)||((x2-x1)<-4096))||((y2-y1)>4096))||((
-y2-y1)<-4096)){B.aa8("%s",EB);return;}var dstBitmap=this.bitmap;var srcBitmap=aBitmap.
+y2-y1)<-4096)){B.aa8("%s",EE);return;}var dstBitmap=this.bitmap;var srcBitmap=aBitmap.
 bitmap;var dstFrameNr=this.Ds;{B.aa9(dstBitmap,srcBitmap,dstFrameNr,aFrameNr,aClip
 ,aDstX1,aDstY1,aDstW1,aDstX2,aDstY2,aDstW2,aDstX3,aDstY3,aDstW3,aDstX4,aDstY4,aDstW4
 ,aSrcRect,aColor1,aColor2,aColor3,aColor4,aBlend,aFilter);}},P3:function(aClip,aBitmap
@@ -86,7 +86,7 @@ if(!this.bitmap)this.Update();if(!this.bitmap)return;if(((!aBitmap||!aBitmap.bit
 )||(aFrameNr<0))||(aFrameNr>=aBitmap.NoOfFrames))return;var top=aDstRect[1];var left=
 aDstRect[0];var right=aDstRect[2];var bottom=aDstRect[3];if(((((right-left)>4096
 )||((right-left)<-4096))||((bottom-top)>4096))||((bottom-top)<-4096)){B.aa8("%s"
-,EC);return;}var dstBitmap=this.bitmap;var srcBitmap=aBitmap.bitmap;var dstFrameNo=
+,EF);return;}var dstBitmap=this.bitmap;var srcBitmap=aBitmap.bitmap;var dstFrameNo=
 this.Ds;{B.aa9(dstBitmap,srcBitmap,dstFrameNo,aFrameNr,aClip,left,top,1,right,top
 ,1,right,bottom,1,left,bottom,1,aSrcRect,aColorTL,aColorTR,aColorBR,aColorBL,aBlend
 ,aFilter);}},MB:function(aClip,aBitmap,aFrameNr,aDstRect,aSrcPos,aColorTL,aColorTR
@@ -99,10 +99,10 @@ gn(dstBitmap,srcBitmap,dstFrameNr,aFrameNr,aClip,aDstRect,aSrcPos,aColorTL,aColo
 this.bitmap;var dstFrameNo=this.Ds;{B.jn(dstBitmap,dstFrameNo,aClip,aDstRect,aColorTL
 ,aColorTR,aColorBR,aColorBL,aBlend);}},Ox:function(aClip,aDstPos1,aDstPos2,Rg,Rh
 ,aColor1,aColor2,aBlend){if(!this.bitmap)this.Update();if(!this.bitmap)return;var
-ER=Rg;var ES=Rh;var El=aDstPos1;var Em=aDstPos2;if(B.z8(El,Em))return;if(ER<=1)ER=
-1;if(ES<=1)ES=1;var Fi=ER/2;var Fj=ES/2;var GJ=El[0];var GK=El[1];var GL=Em[0];var
-GM=Em[1];var CJ=GL-GJ;var CK=GM-GK;var BL=Math.sqrt((CJ*CJ)+(CK*CK));if(((ER>4096
-)||(ES>4096))||(BL>4096)){B.aa8("%s",Gz);return;}CJ=CJ/BL;CK=CK/BL;var x1=GJ+(CK
+EU=Rg;var EV=Rh;var El=aDstPos1;var Em=aDstPos2;if(B.z8(El,Em))return;if(EU<=1)EU=
+1;if(EV<=1)EV=1;var Fi=EU/2;var Fj=EV/2;var GJ=El[0];var GK=El[1];var GL=Em[0];var
+GM=Em[1];var CJ=GL-GJ;var CK=GM-GK;var BL=Math.sqrt((CJ*CJ)+(CK*CK));if(((EU>4096
+)||(EV>4096))||(BL>4096)){B.aa8("%s",Gz);return;}CJ=CJ/BL;CK=CK/BL;var x1=GJ+(CK
 *Fi);var y1=GK-(CJ*Fi);var x2=GL+(CK*Fj);var y2=GM-(CJ*Fj);var x3=GL-(CK*Fj);var
 y3=GM+(CJ*Fj);var x4=GJ-(CK*Fi);var y4=GK+(CJ*Fi);var N8=B.zW(B.abg.Ht);var srcRect=[
 ].concat(IA,B.aaj(N8.FrameSize,Hu));var dstBitmap=this.bitmap;var dstFrameNo=this.

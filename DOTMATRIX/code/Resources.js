@@ -27,18 +27,18 @@
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
 );if(EmWiApp.abg)throw new Error("The unit file 'Resources.js' included twice!");
 EmWiApp.abg=(function(){var B=EmWiApp;var D={};
-var AQ=[0,0];var AO="The property \'FrameSize\' is READ ONLY.";
+var AR=[0,0];var AP="The property \'FrameSize\' is READ ONLY.";
 D.Ac={bitmap:null,FrameDelay:0,NoOfFrames:1,FrameSize:B.vw,DJ:false,Dm:false,Dr:function(
 ){if(!this.bitmap)return;var handle=this.bitmap;B.zx(handle);this.bitmap=null;this.
-FrameSize=AQ;this.FrameDelay=0;this.NoOfFrames=1;this.Dm=false;},BC:function(aArg
-){if(!aArg)return;var handle=null;var noOfFrames=1;var frameSize=AQ;var frameDelay=
+FrameSize=AR;this.FrameDelay=0;this.NoOfFrames=1;this.Dm=false;},BC:function(aArg
+){if(!aArg)return;var handle=null;var noOfFrames=1;var frameSize=AR;var frameDelay=
 0;{var bmp=B.aac(aArg,this);if(bmp){noOfFrames=bmp.NoOfFrames;frameSize=bmp.FrameSize;
 frameDelay=bmp.FrameDelay;}handle=bmp;}this.bitmap=handle;this.NoOfFrames=noOfFrames;
 this.FrameSize=frameSize;this.FrameDelay=frameDelay;this.DJ=true;this.Dm=(!!this.
 bitmap&&(this.FrameDelay>0))&&(this.NoOfFrames>1);},Im:function(C){throw new Error(
-AO);},Update:function(){},_Init:function(aArg){B.Core.E0._Init.call(this,aArg);this.
+AP);},Update:function(){},_Init:function(aArg){B.Core.E3._Init.call(this,aArg);this.
 __proto__=D.Ac;this.BC(aArg);},_Done:function(){this.Dr();this.__proto__=B.Core.
-E0;B.Core.E0._Done.call(this);},_className:"Resources::Bitmap"};D.AC={font:null,
+E3;B.Core.E3._Done.call(this);},_className:"Resources::Bitmap"};D.AC={font:null,
 Leading:0,Descent:0,Ascent:0,Dr:function(){this.Ry();},BC:function(aArg){this.RC(
 aArg);},Ry:function(){if(!this.font)return;var handle=this.font;B.zy(handle);this.
 font=null;this.Ascent=0;this.Descent=0;this.Leading=0;},RC:function(aFontResource
@@ -56,17 +56,17 @@ this.font)return 0;var handle=this.font;var advance=0;advance=B.zG(handle,aFlowS
 );return advance;},PZ:function(aString,aOffset,aWidth,aMaxNoOfRows,aBidi){if(aOffset<
 0)aOffset=0;if(!this.font||((aOffset>0)&&(aOffset>=aString.length)))return B.jm;
 var handle=this.font;var result=B.jm;result=B.aaz(handle,aString,aOffset,aWidth,
-aMaxNoOfRows,aBidi);return result;},EW:function(aString,aOffset,aCount){if(aOffset<
+aMaxNoOfRows,aBidi);return result;},EZ:function(aString,aOffset,aCount){if(aOffset<
 0)aOffset=0;if(!this.font||((aOffset>0)&&(aOffset>=aString.length)))return 0;var
 handle=this.font;var advance=0;advance=B.ms(handle,aString,aOffset,aCount);return advance;
-},_Init:function(aArg){B.Core.E0._Init.call(this,aArg);this.__proto__=D.AC;this.
-BC(aArg);},_Done:function(){this.Dr();this.__proto__=B.Core.E0;B.Core.E0._Done.call(
+},_Init:function(aArg){B.Core.E3._Init.call(this,aArg);this.__proto__=D.AC;this.
+BC(aArg);},_Done:function(){this.Dr();this.__proto__=B.Core.E3;B.Core.E3._Done.call(
 this);},_className:"Resources::Font"};D.CD={_class:function(){return D.AC;},0:{Data:
 function(){return B.abo;},Cache:[],_this:null}};D.Ia={_class:function(){return D.
 AC;},0:{Data:function(){return B.abn;},Cache:[],_this:null}};D.Ht={_class:function(
 ){return D.Ac;},0:{FileName:"./res/ResourcesWhiteBitmapStripe.png",Format:B.jt,NoOfFrames:
 1,FrameSize:[256,4],FrameDelay:0,_this:null}};
-D._Init=function(){D.Ac.__proto__=B.Core.E0;D.AC.__proto__=B.Core.E0;};D._ReInit=
+D._Init=function(){D.Ac.__proto__=B.Core.E3;D.AC.__proto__=B.Core.E3;};D._ReInit=
 function(){};D.Co=function(E){var A;if((A=D.CD[0]._this)&&(A._cycle!=E))A._Done(
 D.CD[0]._this=null);if((A=D.Ia[0]._this)&&(A._cycle!=E))A._Done(D.Ia[0]._this=null
 );if((A=D.Ht[0]._this)&&(A._cycle!=E))A._Done(D.Ht[0]._this=null);};return D;})(

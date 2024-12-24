@@ -29,13 +29,13 @@ var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn'
 EmWiApp.abj=(function(){var B=EmWiApp;var D={};
 
 D.CF={_Init:function(aArg){B.Core.M._Init.call(this,aArg);this.__proto__=D.CF;},_className:
-"Templates::PushButton"};D.Cn={_Init:function(aArg){B.Core.M._Init.call(this,aArg
-);this.__proto__=D.Cn;},_className:"Templates::TextEditor"};D.EU={_Init:function(
-aArg){this.__proto__=D.EU;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
+"Templates::PushButton"};D.Cf={_Init:function(aArg){B.Core.M._Init.call(this,aArg
+);this.__proto__=D.Cf;},_className:"Templates::TextEditor"};D.EX={_Init:function(
+aArg){this.__proto__=D.EX;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
 ,_ReInit:function(){},_Mark:function(E){var A;if((A=this.I)&&(A._cycle!=E))A._Mark(
 A._cycle=E);},I:null,_cycle:0,_observers:null,_className:"Templates::DeviceClass"
 };
-D._Init=function(){D.CF.__proto__=B.Core.M;D.Cn.__proto__=B.Core.M;};D._ReInit=function(
+D._Init=function(){D.CF.__proto__=B.Core.M;D.Cf.__proto__=B.Core.M;};D._ReInit=function(
 ){};D.Co=function(E){};return D;})();
 
 /* Embedded Wizard */
