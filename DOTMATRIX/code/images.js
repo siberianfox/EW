@@ -25,22 +25,50 @@
 *******************************************************************************/
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
-);if(EmWiApp.abj)throw new Error("The unit file 'images.js' included twice!");EmWiApp.
-abj=(function(){var B=EmWiApp;var C={};
+);if(EmWiApp.abi)throw new Error("The unit file 'images.js' included twice!");EmWiApp.
+abi=(function(){var B=EmWiApp;var D={};
 
-C.Hn={_class:function(){return B.abg.At;},0:{FileName:"./res/imagesRC.png",Format:
-B.cC,NoOfFrames:1,FrameSize:[257,597],FrameDelay:0,_this:null}};C.Hy={_class:function(
-){return B.abg.At;},0:{FileName:"./res/imagesalarm_attention.png",Format:B.cC,NoOfFrames:
-1,FrameSize:[11,10],FrameDelay:0,_this:null}};C.GQ={_class:function(){return B.abg.
-At;},0:{FileName:"./res/imagesdot_off.png",Format:B.cC,NoOfFrames:1,FrameSize:[20
-,12],FrameDelay:0,_this:null}};C.GR={_class:function(){return B.abg.At;},0:{FileName:
+D.LA={_class:function(){return B.abg.Ac;},0:{FileName:"./res/imagesRC.png",Format:
+B.cC,NoOfFrames:1,FrameSize:[257,597],FrameDelay:0,_this:null}};D.Jm={_class:function(
+){return B.abg.Ac;},0:{FileName:"./res/imagesBmp_1.png",Format:B.cC,NoOfFrames:1
+,FrameSize:[3,5],FrameDelay:0,_this:null}};D.KC={_class:function(){return B.abg.
+Ac;},0:{FileName:"./res/imagesBmp_2.png",Format:B.cC,NoOfFrames:1,FrameSize:[3,5
+],FrameDelay:0,_this:null}};D.KD={_class:function(){return B.abg.Ac;},0:{FileName:
+"./res/imagesBmp_3.png",Format:B.cC,NoOfFrames:1,FrameSize:[3,5],FrameDelay:0,_this:
+null}};D.KE={_class:function(){return B.abg.Ac;},0:{FileName:"./res/imagesBmp_4.png"
+,Format:B.cC,NoOfFrames:1,FrameSize:[3,5],FrameDelay:0,_this:null}};D.KF={_class:
+function(){return B.abg.Ac;},0:{FileName:"./res/imagesBmp_5_1.png",Format:B.cC,NoOfFrames:
+1,FrameSize:[3,5],FrameDelay:0,_this:null}};D.KG={_class:function(){return B.abg.
+Ac;},0:{FileName:"./res/imagesBmp_6.png",Format:B.cC,NoOfFrames:1,FrameSize:[3,5
+],FrameDelay:0,_this:null}};D.KH={_class:function(){return B.abg.Ac;},0:{FileName:
+"./res/imagesBmp_7_1.png",Format:B.cC,NoOfFrames:1,FrameSize:[3,5],FrameDelay:0,
+_this:null}};D.KI={_class:function(){return B.abg.Ac;},0:{FileName:"./res/imagesBmp_8.png"
+,Format:B.cC,NoOfFrames:1,FrameSize:[3,5],FrameDelay:0,_this:null}};D.KJ={_class:
+function(){return B.abg.Ac;},0:{FileName:"./res/imagesBmp_9.png",Format:B.cC,NoOfFrames:
+1,FrameSize:[3,5],FrameDelay:0,_this:null}};D.Jk={_class:function(){return B.abg.
+Ac;},0:{FileName:"./res/imagesA.png",Format:B.cC,NoOfFrames:1,FrameSize:[4,5],FrameDelay:
+0,_this:null}};D.LV={_class:function(){return B.abg.Ac;},0:{FileName:"./res/imagescalendar.png"
+,Format:B.cC,NoOfFrames:1,FrameSize:[7,7],FrameDelay:0,_this:null}};D.L2={_class:
+function(){return B.abg.Ac;},0:{FileName:"./res/imagesfan_1.png",Format:B.cC,NoOfFrames:
+1,FrameSize:[9,9],FrameDelay:0,_this:null}};D.J_={_class:function(){return B.abg.
+Ac;},0:{FileName:"./res/imagesdot_off.png",Format:B.cC,NoOfFrames:1,FrameSize:[20
+,12],FrameDelay:0,_this:null}};D.J$={_class:function(){return B.abg.Ac;},0:{FileName:
 "./res/imagesdot_on.png",Format:B.cC,NoOfFrames:1,FrameSize:[19,16],FrameDelay:0
-,_this:null}};C.HN={_class:function(){return B.abg.At;},0:{FileName:"./res/imagespower_button.png"
+,_this:null}};D.Mk={_class:function(){return B.abg.Ac;},0:{FileName:"./res/imagespower_button.png"
 ,Format:B.cC,NoOfFrames:1,FrameSize:[75,75],FrameDelay:0,_this:null}};
-C._Init=function(){};C._ReInit=function(){};C.BM=function(E){var A;if((A=C.Hn[0].
-_this)&&(A._cycle!=E))A._Done(C.Hn[0]._this=null);if((A=C.Hy[0]._this)&&(A._cycle
-!=E))A._Done(C.Hy[0]._this=null);if((A=C.GQ[0]._this)&&(A._cycle!=E))A._Done(C.GQ[
-0]._this=null);if((A=C.GR[0]._this)&&(A._cycle!=E))A._Done(C.GR[0]._this=null);if((
-A=C.HN[0]._this)&&(A._cycle!=E))A._Done(C.HN[0]._this=null);};return C;})();
+D._Init=function(){};D._ReInit=function(){};D.Co=function(E){var A;if((A=D.LA[0].
+_this)&&(A._cycle!=E))A._Done(D.LA[0]._this=null);if((A=D.Jm[0]._this)&&(A._cycle
+!=E))A._Done(D.Jm[0]._this=null);if((A=D.KC[0]._this)&&(A._cycle!=E))A._Done(D.KC[
+0]._this=null);if((A=D.KD[0]._this)&&(A._cycle!=E))A._Done(D.KD[0]._this=null);if((
+A=D.KE[0]._this)&&(A._cycle!=E))A._Done(D.KE[0]._this=null);if((A=D.KF[0]._this)&&(
+A._cycle!=E))A._Done(D.KF[0]._this=null);if((A=D.KG[0]._this)&&(A._cycle!=E))A._Done(
+D.KG[0]._this=null);if((A=D.KH[0]._this)&&(A._cycle!=E))A._Done(D.KH[0]._this=null
+);if((A=D.KI[0]._this)&&(A._cycle!=E))A._Done(D.KI[0]._this=null);if((A=D.KJ[0].
+_this)&&(A._cycle!=E))A._Done(D.KJ[0]._this=null);if((A=D.Jk[0]._this)&&(A._cycle
+!=E))A._Done(D.Jk[0]._this=null);if((A=D.LV[0]._this)&&(A._cycle!=E))A._Done(D.LV[
+0]._this=null);if((A=D.L2[0]._this)&&(A._cycle!=E))A._Done(D.L2[0]._this=null);if((
+A=D.J_[0]._this)&&(A._cycle!=E))A._Done(D.J_[0]._this=null);if((A=D.J$[0]._this)&&(
+A._cycle!=E))A._Done(D.J$[0]._this=null);if((A=D.Mk[0]._this)&&(A._cycle!=E))A._Done(
+D.Mk[0]._this=null);};return D;})();
 
 /* Embedded Wizard */

@@ -24,18 +24,11 @@
 *
 *******************************************************************************/
 
-var EmWiCompr_12_05;var EmWiApp;if(!EmWiCompr_12_05)throw new Error("The Embedded Wizard runtime environment file 'emwi_compr_12_05.js' isn't yet loaded!"
-);if(EmWiApp)throw new Error("The application file '_project.js' included twice!"
-);EmWiApp=(function(){var B={__proto__:EmWiCompr_12_05};
-B.Default=0;
-B.aaF=[1200,580];B.qJ=function(){return B.Application.KB;};B.y9="";B.on=0;B.aa6=0;
-B.ju=[];B._Init=function(){B.Core._Init();B.abl._Init();B.Graphics._Init();B.abg.
-_Init();B.abh._Init();B.Application._Init();B.abj._Init();B.abm._Init();B.abk._Init(
-);B.abi._Init();this.__proto__._Init.apply(this,arguments);};B._ReInit=function(
-){B.Core._ReInit();B.abl._ReInit();B.Graphics._ReInit();B.abg._ReInit();B.abh._ReInit(
-);B.Application._ReInit();B.abj._ReInit();B.abm._ReInit();B.abk._ReInit();B.abi.
-_ReInit();};B.aaD=function(E){B.Core.Co(E);B.abl.Co(E);B.Graphics.Co(E);B.abg.Co(
-E);B.abh.Co(E);B.Application.Co(E);B.abj.Co(E);B.abm.Co(E);B.abk.Co(E);B.abi.Co(
-E);};return B;})();
+var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
+);if(EmWiApp.abm)throw new Error("The unit file 'Enum.js' included twice!");EmWiApp.
+abm=(function(){var B=EmWiApp;var D={};
+
+D.Ti={SC:0,SS:1,OL:2,Sw:3,S_:4};D.Tj={SQ:0,SM:1,SN:2,OL:3};D.Fv={SK:0,So:1};
+D._Init=function(){};D._ReInit=function(){};D.Co=function(E){};return D;})();
 
 /* Embedded Wizard */
