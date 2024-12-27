@@ -28,14 +28,14 @@ var EmWiCompr_12_05;var EmWiApp;if(!EmWiCompr_12_05)throw new Error("The Embedde
 );if(EmWiApp)throw new Error("The application file '_project.js' included twice!"
 );EmWiApp=(function(){var B={__proto__:EmWiCompr_12_05};
 B.Default=0;
-B.aaF=[1050,580];B.qJ=function(){return B.Application.KB;};B.y9="";B.on=0;B.aa6=0;
-B.ju=[];B._Init=function(){B.Core._Init();B.abl._Init();B.Graphics._Init();B.abg.
+B.aaF=[1050,580];B.qJ=function(){return B.Application.Mr;};B.y9="";B.on=0;B.aa6=0;
+B.ju=[];B._Init=function(){B.Core._Init();B.abl._Init();B.Graphics._Init();B.abi.
 _Init();B.abh._Init();B.Application._Init();B.abj._Init();B.abm._Init();B.abk._Init(
-);B.abi._Init();this.__proto__._Init.apply(this,arguments);};B._ReInit=function(
-){B.Core._ReInit();B.abl._ReInit();B.Graphics._ReInit();B.abg._ReInit();B.abh._ReInit(
-);B.Application._ReInit();B.abj._ReInit();B.abm._ReInit();B.abk._ReInit();B.abi.
-_ReInit();};B.aaD=function(E){B.Core.Co(E);B.abl.Co(E);B.Graphics.Co(E);B.abg.Co(
-E);B.abh.Co(E);B.Application.Co(E);B.abj.Co(E);B.abm.Co(E);B.abk.Co(E);B.abi.Co(
-E);};return B;})();
+);B.abg._Init();this.__proto__._Init.apply(this,arguments);};B._ReInit=function(
+){B.Core._ReInit();B.abl._ReInit();B.Graphics._ReInit();B.abi._ReInit();B.abh._ReInit(
+);B.Application._ReInit();B.abj._ReInit();B.abm._ReInit();B.abk._ReInit();B.abg.
+_ReInit();};B.aaD=function(D){B.Core.CH(D);B.abl.CH(D);B.Graphics.CH(D);B.abi.CH(
+D);B.abh.CH(D);B.Application.CH(D);B.abj.CH(D);B.abm.CH(D);B.abk.CH(D);B.abg.CH(
+D);};return B;})();
 
 /* Embedded Wizard */

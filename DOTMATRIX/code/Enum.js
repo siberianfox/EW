@@ -26,9 +26,12 @@
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
 );if(EmWiApp.abm)throw new Error("The unit file 'Enum.js' included twice!");EmWiApp.
-abm=(function(){var B=EmWiApp;var D={};
+abm=(function(){var B=EmWiApp;var C={};
 
-D.Ti={SC:0,SS:1,OL:2,Sw:3,S_:4};D.Tj={SQ:0,SM:1,SN:2,OL:3};D.Fv={SK:0,So:1};
-D._Init=function(){};D._ReInit=function(){};D.Co=function(E){};return D;})();
+C.Wx={VO:0,V3:1,Rg:2,VG:3,Wm:4};C.I1={Rf:0,VX:1,VY:2,Rg:3};C.FJ={O8:0,Ms:1};C.Hh={
+O8:0,Ms:1};C.FK={O8:0,Ms:1};C.GR={VB:0,VN:1,VD:2};C.VM={Rf:0,Lh:1,WE:2,Lr:3,Info:
+4,Wy:5,Wz:6,VA:7,Wn:8};C.E_={Wj:0,Wk:1,Wl:2,Ms:3};C.V2={LY:0,L1:1,L2:2,LZ:3,L0:4
+};
+C._Init=function(){};C._ReInit=function(){};C.CH=function(D){};return C;})();
 
 /* Embedded Wizard */

@@ -25,51 +25,51 @@
 *******************************************************************************/
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
-);if(EmWiApp.abg)throw new Error("The unit file 'Resources.js' included twice!");
-EmWiApp.abg=(function(){var B=EmWiApp;var D={};
-var AR=[0,0];var AP="The property \'FrameSize\' is READ ONLY.";
-D.Ac={bitmap:null,FrameDelay:0,NoOfFrames:1,FrameSize:B.vw,DJ:false,Dm:false,Dr:function(
+);if(EmWiApp.abi)throw new Error("The unit file 'Resources.js' included twice!");
+EmWiApp.abi=(function(){var B=EmWiApp;var C={};
+var A7=[0,0];var AW="The property \'FrameSize\' is READ ONLY.";
+C.Ab={bitmap:null,FrameDelay:0,NoOfFrames:1,FrameSize:B.vw,D_:false,DI:false,DN:function(
 ){if(!this.bitmap)return;var handle=this.bitmap;B.zx(handle);this.bitmap=null;this.
-FrameSize=AR;this.FrameDelay=0;this.NoOfFrames=1;this.Dm=false;},BC:function(aArg
-){if(!aArg)return;var handle=null;var noOfFrames=1;var frameSize=AR;var frameDelay=
+FrameSize=A7;this.FrameDelay=0;this.NoOfFrames=1;this.DI=false;},AO:function(aArg
+){if(!aArg)return;var handle=null;var noOfFrames=1;var frameSize=A7;var frameDelay=
 0;{var bmp=B.aac(aArg,this);if(bmp){noOfFrames=bmp.NoOfFrames;frameSize=bmp.FrameSize;
 frameDelay=bmp.FrameDelay;}handle=bmp;}this.bitmap=handle;this.NoOfFrames=noOfFrames;
-this.FrameSize=frameSize;this.FrameDelay=frameDelay;this.DJ=true;this.Dm=(!!this.
-bitmap&&(this.FrameDelay>0))&&(this.NoOfFrames>1);},Im:function(C){throw new Error(
-AP);},Update:function(){},_Init:function(aArg){B.Core.E3._Init.call(this,aArg);this.
-__proto__=D.Ac;this.BC(aArg);},_Done:function(){this.Dr();this.__proto__=B.Core.
-E3;B.Core.E3._Done.call(this);},_className:"Resources::Bitmap"};D.AC={font:null,
-Leading:0,Descent:0,Ascent:0,Dr:function(){this.Ry();},BC:function(aArg){this.RC(
-aArg);},Ry:function(){if(!this.font)return;var handle=this.font;B.zy(handle);this.
-font=null;this.Ascent=0;this.Descent=0;this.Leading=0;},RC:function(aFontResource
+this.FrameSize=frameSize;this.FrameDelay=frameDelay;this.D_=true;this.DI=(!!this.
+bitmap&&(this.FrameDelay>0))&&(this.NoOfFrames>1);},J0:function(E){throw new Error(
+AW);},Update:function(){},_Init:function(aArg){B.Core.FS._Init.call(this,aArg);this.
+__proto__=C.Ab;this.AO(aArg);},_Done:function(){this.DN();this.__proto__=B.Core.
+FS;B.Core.FS._Done.call(this);},_className:"Resources::Bitmap"};C.AS={font:null,
+Leading:0,Descent:0,Ascent:0,DN:function(){this.Us();},AO:function(aArg){this.Uw(
+aArg);},Us:function(){if(!this.font)return;var handle=this.font;B.zy(handle);this.
+font=null;this.Ascent=0;this.Descent=0;this.Leading=0;},Uw:function(aFontResource
 ){if(!aFontResource)return;var handle=null;var ascent=0;var descent=0;var leading=
 0;{var font=B.aae(aFontResource);if(font){ascent=font.Ascent;descent=font.Descent;
 leading=font.Leading;}handle=font;}this.font=handle;this.Ascent=ascent;this.Descent=
-descent;this.Leading=leading;},Oy:function(aString,aOffset,aCount,aColumn,aMinWidth
+descent;this.Leading=leading;},Q4:function(aString,aOffset,aCount,aColumn,aMinWidth
 ){if(aOffset<0)aOffset=0;if(!this.font)return 0;if((aOffset>0)&&(aOffset>aString.
 length))aOffset=aString.length;var handle=this.font;var pos=0;pos=B.zQ(handle,aString
-,aOffset,aCount,aColumn,aMinWidth);return pos;},Oz:function(aString,aOffset,aCount
+,aOffset,aCount,aColumn,aMinWidth);return pos;},Q5:function(aString,aOffset,aCount
 ,aX,aMinWidth){if(aOffset<0)aOffset=0;if(!this.font)return 0;if((aOffset>0)&&(aOffset>
 aString.length))aOffset=aString.length;var handle=this.font;var col=0;col=B.z0(handle
-,aString,aOffset,aCount,aX,aMinWidth);return col;},MG:function(aFlowString){if(!
+,aString,aOffset,aCount,aX,aMinWidth);return col;},OQ:function(aFlowString){if(!
 this.font)return 0;var handle=this.font;var advance=0;advance=B.zG(handle,aFlowString
-);return advance;},PZ:function(aString,aOffset,aWidth,aMaxNoOfRows,aBidi){if(aOffset<
+);return advance;},Sl:function(aString,aOffset,aWidth,aMaxNoOfRows,aBidi){if(aOffset<
 0)aOffset=0;if(!this.font||((aOffset>0)&&(aOffset>=aString.length)))return B.jm;
 var handle=this.font;var result=B.jm;result=B.aaz(handle,aString,aOffset,aWidth,
-aMaxNoOfRows,aBidi);return result;},EZ:function(aString,aOffset,aCount){if(aOffset<
+aMaxNoOfRows,aBidi);return result;},FM:function(aString,aOffset,aCount){if(aOffset<
 0)aOffset=0;if(!this.font||((aOffset>0)&&(aOffset>=aString.length)))return 0;var
 handle=this.font;var advance=0;advance=B.ms(handle,aString,aOffset,aCount);return advance;
-},_Init:function(aArg){B.Core.E3._Init.call(this,aArg);this.__proto__=D.AC;this.
-BC(aArg);},_Done:function(){this.Dr();this.__proto__=B.Core.E3;B.Core.E3._Done.call(
-this);},_className:"Resources::Font"};D.CD={_class:function(){return D.AC;},0:{Data:
-function(){return B.abo;},Cache:[],_this:null}};D.Ia={_class:function(){return D.
-AC;},0:{Data:function(){return B.abn;},Cache:[],_this:null}};D.Ht={_class:function(
-){return D.Ac;},0:{FileName:"./res/ResourcesWhiteBitmapStripe.png",Format:B.jt,NoOfFrames:
+},_Init:function(aArg){B.Core.FS._Init.call(this,aArg);this.__proto__=C.AS;this.
+AO(aArg);},_Done:function(){this.DN();this.__proto__=B.Core.FS;B.Core.FS._Done.call(
+this);},_className:"Resources::Font"};C.CD={_class:function(){return C.AS;},0:{Data:
+function(){return B.abo;},Cache:[],_this:null}};C.Im={_class:function(){return C.
+AS;},0:{Data:function(){return B.abn;},Cache:[],_this:null}};C.I0={_class:function(
+){return C.Ab;},0:{FileName:"./res/ResourcesWhiteBitmapStripe.png",Format:B.jt,NoOfFrames:
 1,FrameSize:[256,4],FrameDelay:0,_this:null}};
-D._Init=function(){D.Ac.__proto__=B.Core.E3;D.AC.__proto__=B.Core.E3;};D._ReInit=
-function(){};D.Co=function(E){var A;if((A=D.CD[0]._this)&&(A._cycle!=E))A._Done(
-D.CD[0]._this=null);if((A=D.Ia[0]._this)&&(A._cycle!=E))A._Done(D.Ia[0]._this=null
-);if((A=D.Ht[0]._this)&&(A._cycle!=E))A._Done(D.Ht[0]._this=null);};return D;})(
+C._Init=function(){C.Ab.__proto__=B.Core.FS;C.AS.__proto__=B.Core.FS;};C._ReInit=
+function(){};C.CH=function(D){var A;if((A=C.CD[0]._this)&&(A._cycle!=D))A._Done(
+C.CD[0]._this=null);if((A=C.Im[0]._this)&&(A._cycle!=D))A._Done(C.Im[0]._this=null
+);if((A=C.I0[0]._this)&&(A._cycle!=D))A._Done(C.I0[0]._this=null);};return C;})(
 );
 
 /* Embedded Wizard */

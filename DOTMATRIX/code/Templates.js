@@ -26,16 +26,16 @@
 
 var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn't yet loaded!"
 );if(EmWiApp.abj)throw new Error("The unit file 'Templates.js' included twice!");
-EmWiApp.abj=(function(){var B=EmWiApp;var D={};
+EmWiApp.abj=(function(){var B=EmWiApp;var C={};
 
-D.CF={_Init:function(aArg){B.Core.M._Init.call(this,aArg);this.__proto__=D.CF;},_className:
-"Templates::PushButton"};D.Cf={_Init:function(aArg){B.Core.M._Init.call(this,aArg
-);this.__proto__=D.Cf;},_className:"Templates::TextEditor"};D.EX={_Init:function(
-aArg){this.__proto__=D.EX;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
-,_ReInit:function(){},_Mark:function(E){var A;if((A=this.I)&&(A._cycle!=E))A._Mark(
-A._cycle=E);},I:null,_cycle:0,_observers:null,_className:"Templates::DeviceClass"
+C.C4={_Init:function(aArg){B.Core.R._Init.call(this,aArg);this.__proto__=C.C4;},_className:
+"Templates::PushButton"};C.Cx={_Init:function(aArg){B.Core.R._Init.call(this,aArg
+);this.__proto__=C.Cx;},_className:"Templates::TextEditor"};C.Er={_Init:function(
+aArg){this.__proto__=C.Er;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
+,_ReInit:function(){},_Mark:function(D){var A;if((A=this.G)&&(A._cycle!=D))A._Mark(
+A._cycle=D);},G:null,_cycle:0,_observers:null,_className:"Templates::DeviceClass"
 };
-D._Init=function(){D.CF.__proto__=B.Core.M;D.Cf.__proto__=B.Core.M;};D._ReInit=function(
-){};D.Co=function(E){};return D;})();
+C._Init=function(){C.C4.__proto__=B.Core.R;C.Cx.__proto__=B.Core.R;};C._ReInit=function(
+){};C.CH=function(D){};return C;})();
 
 /* Embedded Wizard */
