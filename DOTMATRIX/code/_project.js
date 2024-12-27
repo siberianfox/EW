@@ -28,7 +28,7 @@ var EmWiCompr_12_05;var EmWiApp;if(!EmWiCompr_12_05)throw new Error("The Embedde
 );if(EmWiApp)throw new Error("The application file '_project.js' included twice!"
 );EmWiApp=(function(){var B={__proto__:EmWiCompr_12_05};
 B.Default=0;
-B.aaF=[1050,580];B.qJ=function(){return B.Application.Mr;};B.y9="";B.on=0;B.aa6=0;
+B.aaF=[1050,580];B.qJ=function(){return B.Application.Mq;};B.y9="";B.on=0;B.aa6=0;
 B.ju=[];B._Init=function(){B.Core._Init();B.abl._Init();B.Graphics._Init();B.abi.
 _Init();B.abh._Init();B.Application._Init();B.abj._Init();B.abm._Init();B.abk._Init(
 );B.abg._Init();this.__proto__._Init.apply(this,arguments);};B._ReInit=function(
