@@ -28,10 +28,10 @@ var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn'
 );if(EmWiApp.abm)throw new Error("The unit file 'Enum.js' included twice!");EmWiApp.
 abm=(function(){var B=EmWiApp;var C={};
 
-C.WB={VS:0,V7:1,Rk:2,VK:3,Wq:4};C.I0={Rj:0,V1:1,V2:2,Rk:3};C.FJ={Pa:0,Mr:1};C.Hg={
-Pa:0,Mr:1};C.FK={Pa:0,Mr:1};C.GR={VF:0,VR:1,VH:2};C.VQ={Rj:0,Lg:1,WI:2,Lq:3,Info:
-4,WC:5,WD:6,VE:7,Wr:8};C.E_={Wn:0,Wo:1,Wp:2,Mr:3};C.V6={LX:0,L0:1,L1:2,LY:3,LZ:4
-};
-C._Init=function(){};C._ReInit=function(){};C.CH=function(D){};return C;})();
+C.X7={Xm:0,XB:1,Sl:2,Xe:3,XW:4};C.HW={Sk:0,Xv:1,Xw:2,Sl:3};C.FX={P5:0,MY:1};C.Hv={
+P5:0,MY:1};C.FY={P5:0,MY:1};C.G2={W_:0,Xl:1,Xb:2};C.Xk={Sk:0,LG:1,Yb:2,LT:3,Info:
+4,X8:5,W$:6};C.Fk={XT:0,XU:1,XV:2,MY:3};C.XA={Mt:0,Mw:1,Mx:2,Mu:3,Mv:4};C.Fl={Lq:
+0,LV:1,L2:2,LJ:3,X6:4,Ci:5};
+C._Init=function(){};C._ReInit=function(){};C.CO=function(D){};return C;})();
 
 /* Embedded Wizard */
