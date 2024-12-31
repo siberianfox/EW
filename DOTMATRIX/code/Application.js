@@ -33,46 +33,46 @@ var Qa="DelayOn Setting";var Qb="Info";var Qc="Loading";var Km="OFF";var Ng="Osc
 var Qd="Show Delay Off";var Qe="Show Delay On";var Nh="WiFi Pairing";var VI="Work";
 var VJ="GUI Version  ";var R9=".";var VK="No Pair";var R_="NO WiFi";var R$="OK";
 var VL="unhandled wifi status update";var VM="Fail";var VN="Idle";var Sa="Pairing";
-var VO="ShowPin";var VP="unexpected wifi pairing status";var VQ=[0,0,1200,660];var
-VR=[0,-1,800,660];var VS=[0,630,15,660];var VT=[548,0,1200,660];var VU=[554,65,749
-,518];var VV=[21,576];var VW=[229,576];var VX=[229,156];var VY=[21,156];var VZ=[
-306,157,516,577];var V0=[376,44,447,108];var V1=[384,48,439,103];var V2=[798,10,
-898,40];var V3="Simulation";var V4=[754,81,809,107];var V5="Temp";var V6=[820,81
-,873,107];var Sb="25";var V7=[754,142,809,168];var V8="PM2.5";var V9=[820,142,873
-,168];var V_="1";var V$=[754,111,809,137];var Wa="AQI";var Wb=[820,111,873,137];
-var Wc="2";var Wd=[754,174,809,200];var We="VOC";var Wf=[820,174,873,200];var Wg=
-"3";var Wh=[752,464,842,498];var Wi="WiFi Idle";var Wj=[752,500,842,534];var Wk=[
-752,537,842,571];var Wl="WiFi Fail";var Wm=[752,574,842,608];var Sc="WiFi OK";var
-Wn=[752,611,842,645];var Wo="WiFi pin";var Wp=[903,173,958,199];var Wq="Pin";var
-Wr=[970,173,1044,199];var Sd="666";var Ws=[576,116,640,175];var Wt=[666,116,730,
-175];var Wu=[573,185,620,232];var Wv=[630,185,731,231];var Ww=[575,242,619,286];
-var Wx=[633,242,677,286];var Wy=[686,243,730,287];var Wz=[577,297,621,341];var WA=[
-686,299,730,343];var WB=[576,354,620,398];var WC=[687,354,731,398];var WD=[574,410
-,618,454];var WE=[630,411,674,455];var WF=[686,409,730,453];var WG=[380,46,444,105
-];var WH=[770,320,876,367];var WI="ON/OFF";var WJ=[753,252,808,278];var WK="Mode";
-var WL=[873,271];var WM=[806,271];var WN=[811,252,866,271];var Se=[762,368,876,415
-];var Sf="Calendar";var WO=[214,75,314,105];var WP=[887,320,971,367];var WQ="Alert";
-var WR=[887,368,971,415];var WS="ECO";var WT=[890,81,959,107];var WU="Room";var WV=[
-970,81,1044,107];var WW=[990,368,1086,415];var WX="Child Lock";var WY=[990,320,1086
-,367];var WZ="SleepMode";var W0=[889,111,959,137];var Sg="DelayOFF";var W1=[970,
-111,1044,137];var Sh="3600";var W2=[891,142,959,168];var W3="DelayON";var W4=[970
-,142,1044,168];var W5=[762,414,876,461];var W6=[967,414,1086,461];var W7="DelayStart";
-var W8=[900,252,971,278];var W9="OscDeg";var W_=[1036,271];var W$=[969,271];var Xa=[
-974,252,1029,271];var Xb=[753,282,808,308];var Xc="State";var Xd=[937,301];var Xe=[
-806,301];var Xf=[811,282,937,301];var Xg=[754,206,809,232];var Xh="NOx";var Xi=[
-820,206,873,232];var Xj="4";var Xk=[962,468,1052,502];var Xl="WiFi OFF";var Xm=[
-962,505,1052,539];var Xn="WiFi NoPair";var Xo=[962,542,1052,576];var Xp=[962,579
-,1052,613];var Xq=[1058,582,1113,608];var Xr="WiFi";var Xs=[1192,601];var Xt=[1111
-,601];var Xu=[1112,582,1192,601];var Xv=[849,621,904,647];var Xw=[983,640];var Xx=[
-902,640];var Xy=[903,621,983,640];var Xz=[324,613,494,650];var XA="GUI Version  0.0.1";
-var XB="not handled gui state";var XC="unhandled case";var XD="unhandled case ";
-var Cv=[0,0,15,30];var XE=[0,0,13,13];var Si=[0,0,210,420];var XF="Text";var Kn=[
-0,0];var XG=[20,20];var XH=[-10,-10];var LH="%";var XI="\n";var XJ=[0,0,161,121];
-var Sj=[0,0,160,120];var XK=[0,120];var XL=[160,120];var XM=[160,0];var XN=[2,2,
-157,117];var XO="Text\n";var XP=[50,70];var XQ=[50,50];var XR=[2,0,6,9];var XS=[
-6,1,10,7];var XT=[10,0,14,9];var XU=[2,4,6,13];var XV=[6,5,10,11];var XW=[10,4,14
-,13];var XX=[2,6,6,15];var XY=[6,8,10,14];var XZ=[10,6,14,15];var Sk=[2,8,6,17];
-var Sl=[6,8,10,17];var Sm=[10,8,14,17];var X0=[2,9,13,19];var X1="WiFi Pairing 4 minutes timeout";
+var VO="ShowPin";var VP="unexpected wifi pairing status";var VQ=[0,0,1088,660];var
+VR=[0,-1,499,660];var VS=[0,630,15,660];var VT=[499,0,1088,660];var VU=[509,67,704
+,520];var VV=[21,576];var VW=[229,576];var VX=[229,156];var VY=[21,156];var VZ=[
+261,156,471,576];var V0=[376,44,447,108];var V1=[384,48,439,103];var V2=[753,12,
+853,42];var V3="Simulation";var V4=[709,83,764,109];var V5="Temp";var V6=[775,83
+,828,109];var Sb="25";var V7=[709,144,764,170];var V8="PM2.5";var V9=[775,144,828
+,170];var V_="1";var V$=[709,113,764,139];var Wa="AQI";var Wb=[775,113,828,139];
+var Wc="2";var Wd=[709,176,764,202];var We="VOC";var Wf=[775,176,828,202];var Wg=
+"3";var Wh=[516,533,606,567];var Wi="WiFi Idle";var Wj=[516,569,606,603];var Wk=[
+516,606,606,640];var Wl="WiFi Fail";var Wm=[615,569,705,603];var Sc="WiFi OK";var
+Wn=[615,606,705,640];var Wo="WiFi pin";var Wp=[858,175,913,201];var Wq="Pin";var
+Wr=[925,175,999,201];var Sd="666";var Ws=[531,118,595,177];var Wt=[621,118,685,177
+];var Wu=[528,187,575,234];var Wv=[585,187,686,233];var Ww=[530,244,574,288];var
+Wx=[588,244,632,288];var Wy=[641,245,685,289];var Wz=[532,299,576,343];var WA=[641
+,301,685,345];var WB=[531,356,575,400];var WC=[642,356,686,400];var WD=[529,412,
+573,456];var WE=[585,413,629,457];var WF=[641,411,685,455];var WG=[380,46,444,105
+];var WH=[725,322,831,369];var WI="ON/OFF";var WJ=[708,254,763,280];var WK="Mode";
+var WL=[828,273];var WM=[761,273];var WN=[766,254,821,273];var Se=[717,370,831,417
+];var Sf="Calendar";var WO=[214,75,314,105];var WP=[842,322,926,369];var WQ="Alert";
+var WR=[842,370,926,417];var WS="ECO";var WT=[845,83,914,109];var WU="Room";var WV=[
+925,83,999,109];var WW=[945,370,1041,417];var WX="Child Lock";var WY=[945,322,1041
+,369];var WZ="SleepMode";var W0=[844,113,914,139];var Sg="DelayOFF";var W1=[925,
+113,999,139];var Sh="3600";var W2=[846,144,914,170];var W3="DelayON";var W4=[925
+,144,999,170];var W5=[717,416,831,463];var W6=[922,416,1041,463];var W7="DelayStart";
+var W8=[855,254,926,280];var W9="OscDeg";var W_=[991,273];var W$=[924,273];var Xa=[
+929,254,984,273];var Xb=[708,284,763,310];var Xc="State";var Xd=[892,303];var Xe=[
+761,303];var Xf=[766,284,892,303];var Xg=[709,208,764,234];var Xh="NOx";var Xi=[
+775,208,828,234];var Xj="4";var Xk=[848,499,938,533];var Xl="WiFi OFF";var Xm=[848
+,536,938,570];var Xn="WiFi NoPair";var Xo=[848,573,938,607];var Xp=[848,610,938,
+644];var Xq=[944,613,999,639];var Xr="WiFi";var Xs=[1078,632];var Xt=[997,632];var
+Xu=[998,613,1078,632];var Xv=[708,611,763,637];var Xw=[842,630];var Xx=[761,630];
+var Xy=[762,611,842,630];var Xz=[324,613,494,650];var XA="GUI Version  0.0.1";var
+XB="not handled gui state";var XC="unhandled case";var XD="unhandled case ";var Cv=[
+0,0,15,30];var XE=[0,0,13,13];var Si=[0,0,210,420];var XF="Text";var Kn=[0,0];var
+XG=[20,20];var XH=[-10,-10];var LH="%";var XI="\n";var XJ=[0,0,161,121];var Sj=[
+0,0,160,120];var XK=[0,120];var XL=[160,120];var XM=[160,0];var XN=[2,2,157,117];
+var XO="Text\n";var XP=[50,70];var XQ=[50,50];var XR=[2,0,6,9];var XS=[6,1,10,7];
+var XT=[10,0,14,9];var XU=[2,4,6,13];var XV=[6,5,10,11];var XW=[10,4,14,13];var XX=[
+2,6,6,15];var XY=[6,8,10,14];var XZ=[10,6,14,15];var Sk=[2,8,6,17];var Sl=[6,8,10
+,17];var Sm=[10,8,14,17];var X0=[2,9,13,19];var X1="WiFi Pairing 4 minutes timeout";
 var X2=[0,13,4,18];var X3=[4,13,8,18];var Sn=[8,13,12,18];var X4=[11,13,15,18];var
 X5=[3,13,7,18];var X6=[3,4,12,10];var X7=[2,5,6,10];var X8=[7,5,8,10];var X9=[9,
 5,13,10];var X_=[2,13,11,18];var X$="123";var Ni=[0,0,3,5];var Ya=[0,0,20,5];var
