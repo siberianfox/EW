@@ -28,14 +28,14 @@ var EmWiApp;if(!EmWiApp)throw new Error("The application file '_project.js' isn'
 );if(EmWiApp.abk)throw new Error("The unit file 'Templates.js' included twice!");
 EmWiApp.abk=(function(){var B=EmWiApp;var C={};
 
-C.C8={_Init:function(aArg){B.Core.P._Init.call(this,aArg);this.__proto__=C.C8;},_className:
-"Templates::PushButton"};C.CC={_Init:function(aArg){B.Core.P._Init.call(this,aArg
-);this.__proto__=C.CC;},_className:"Templates::TextEditor"};C.EK={_Init:function(
-aArg){this.__proto__=C.EK;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
-,_ReInit:function(){},_Mark:function(D){var A;if((A=this.H)&&(A._cycle!=D))A._Mark(
-A._cycle=D);},H:null,_cycle:0,_observers:null,_className:"Templates::DeviceClass"
+C.CG={_Init:function(aArg){B.Core.O._Init.call(this,aArg);this.__proto__=C.CG;},_className:
+"Templates::PushButton"};C.CW={_Init:function(aArg){B.Core.O._Init.call(this,aArg
+);this.__proto__=C.CW;},_className:"Templates::TextEditor"};C.Fp={_Init:function(
+aArg){this.__proto__=C.Fp;B.hJ++;},_Done:function(){this.__proto__=null;B.hJ--;}
+,_ReInit:function(){},_Mark:function(D){var A;if((A=this.G)&&(A._cycle!=D))A._Mark(
+A._cycle=D);},G:null,_cycle:0,_observers:null,_className:"Templates::DeviceClass"
 };
-C._Init=function(){C.C8.__proto__=B.Core.P;C.CC.__proto__=B.Core.P;};C._ReInit=function(
-){};C.CO=function(D){};return C;})();
+C._Init=function(){C.CG.__proto__=B.Core.O;C.CW.__proto__=B.Core.O;};C._ReInit=function(
+){};C.C9=function(D){};return C;})();
 
 /* Embedded Wizard */
